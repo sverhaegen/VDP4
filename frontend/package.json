@@ -2,7 +2,7 @@
   "name": "frontend",
   "version": "1.0.0",
   "scripts": {
-    "start:dev": "live-server --entry-file='./html/index.html' --browser='google chrome'",
+    "start:dev": "live-server --entry-file='./index.html' --browser='google chrome'",
     "build:watch": "npx tsc -w"
   },
   "author": "",
