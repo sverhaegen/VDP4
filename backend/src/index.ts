@@ -2,6 +2,7 @@
 import express, { Request, Response } from 'express';
 import cors from 'cors';
 import mysql from 'mysql2';
+import postgres from 'postgres';
 
 // Create an Express application
 const app = express();
@@ -15,16 +16,32 @@ app.use(cors(corsOptions));
 
 //mysql connection
 
-var con = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: 'Sjmella4977',
-});
+// var con = mysql.createConnection({
+//   host: 'localhost',
+//   user: 'root',
+//   password: 'Sjmella4977',
+// });
 
-con.connect(function (err) {
-  if (err) throw err;
-  console.log('Connected!!');
-});
+// con.connect(function (err) {
+//   if (err) throw err;
+//   console.log('Connected!!');
+// });
+
+// postgres connection
+
+// const sql = postgres({
+//   host: 'localhost',
+//   port: 5432,
+//   user: 'stijnverhaegen',
+//   database: 'vdp4',
+// });
+
+// const players = sql`
+//   SELECT first_name, last_name
+//   FROM public.players;
+// `.then((response) => {
+//   console.log(response);
+// });
 
 // Specify the port number for the server
 const port: number = 3000;
