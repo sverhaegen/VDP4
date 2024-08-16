@@ -17,11 +17,15 @@ body {
   grid-auto-columns: 1fr;
   grid-auto-rows: 1fr;
   grid-template-areas:
-    'top-left-corner top-strip top-strip top-strip top-right-corner'
-    'left-strip logo logo logo right-strip'
-    'left-strip logo logo logo right-strip'
-    'left-strip construction-text construction-text construction-text right-strip'
-    'bottom-left-corner bottom-strip bottom-strip bottom-strip bottom-right-corner';
+    'top-left-corner top-strip top-strip top-strip top-strip top-strip top-right-corner'
+    'left-strip logo logo logo logo logo right-strip'
+    'left-strip logo logo logo logo logo right-strip'
+    'left-strip logo logo logo logo logo right-strip'
+    'left-strip logo logo logo logo logo right-strip'
+    'left-strip logo logo logo logo logo right-strip'
+    'left-strip logo logo logo logo logo right-strip'
+    'left-strip construction-text construction-text construction-text construction-text construction-text right-strip'
+    'bottom-left-corner bottom-strip bottom-strip bottom-strip bottom-strip bottom-strip bottom-right-corner';
 }
 
 .item1 {
