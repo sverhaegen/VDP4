@@ -28,7 +28,8 @@
         "hidden": false,
         "group": "Frontend",
         "order": 1
-      }
+      },
+      "envFile": "${workspaceFolder}/.env/local.env"
     },
     {
       "name": "Frontend start live-server",
@@ -70,7 +71,8 @@
         "hidden": false,
         "group": "Backend",
         "order": 2
-      }
+      },
+      "envFile": "${workspaceFolder}/.env/local.env"
     }
   ]
 }
