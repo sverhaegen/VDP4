@@ -9,7 +9,7 @@ const app = express();
 
 //cors
 const corsOptions = {
-  origin: 'http://127.0.0.1:8080',
+  origin: process.env.FRONTEND_BASE_URL,
   optionsSuccessStatus: 200,
 };
 app.use(cors(corsOptions));
