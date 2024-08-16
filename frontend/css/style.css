@@ -1,3 +1,82 @@
-h1 {
-  color: rgb(18, 212, 34);
+:root {
+  --black: rgb(0, 0, 0);
+  --gold: rgb(212, 175, 55);
+  --light-gold: rgb(238, 201, 71);
+  --off-white: rgb(245, 245, 245);
+}
+
+body {
+  background-color: var(--off-white);
+  margin: 0;
+}
+
+.grid-container {
+  display: grid;
+  gap: 0.5rem;
+  height: 100vh;
+  grid-auto-columns: 1fr;
+  grid-auto-rows: 1fr;
+  grid-template-areas:
+    'top-left-corner top-strip top-strip top-strip top-right-corner'
+    'left-strip logo logo logo right-strip'
+    'left-strip logo logo logo right-strip'
+    'left-strip construction-text construction-text construction-text right-strip'
+    'bottom-left-corner bottom-strip bottom-strip bottom-strip bottom-right-corner';
+}
+
+.item1 {
+  grid-area: top-left-corner;
+  background-color: var(--black);
+}
+.item2 {
+  grid-area: top-right-corner;
+  background-color: var(--black);
+}
+.item3 {
+  grid-area: bottom-left-corner;
+  background-color: var(--black);
+}
+.item4 {
+  grid-area: bottom-right-corner;
+  background-color: var(--black);
+}
+
+.item5 {
+  grid-area: top-strip;
+  background-color: var(--gold);
+}
+.item6 {
+  grid-area: bottom-strip;
+  background-color: var(--gold);
+}
+.item7 {
+  grid-area: left-strip;
+  background-color: var(--gold);
+}
+.item8 {
+  grid-area: right-strip;
+  background-color: var(--gold);
+}
+
+.item9 {
+  grid-area: logo;
+  background-color: var(--black);
+}
+.item9 img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.item10 {
+  grid-area: construction-text;
+  background-color: var(--black);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.item10 b {
+  color: var(--off-white);
+  font-size: xx-large;
+  text-align: center;
 }
