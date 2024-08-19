@@ -1,1 +1,1 @@
-export const BACKEND_BASE_URL: string = 'http://localhost:3000';
+export const BACKEND_BASE_URL: string = 'https://vdp4-dev.onrender.com';
