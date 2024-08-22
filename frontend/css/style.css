@@ -23,7 +23,7 @@ body {
     'left-strip logo logo logo logo logo right-strip'
     'left-strip logo logo logo logo logo right-strip'
     'left-strip logo logo logo logo logo right-strip'
-    'left-strip logo logo logo logo logo right-strip'
+    'left-strip upcoming-match-text upcoming-match-text upcoming-match-text upcoming-match-text upcoming-match-text right-strip'
     'left-strip construction-text construction-text construction-text construction-text construction-text right-strip'
     'bottom-left-corner bottom-strip bottom-strip bottom-strip bottom-strip bottom-strip bottom-right-corner';
 }
@@ -75,16 +75,33 @@ body {
 .item10 {
   grid-area: construction-text;
   background-color: var(--black);
+  color: var(--off-white);
+  font-size: xx-large;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   flex-wrap: nowrap;
 }
-.item10 {
+
+.item11 {
+  grid-area: upcoming-match-text;
+  background-color: var(--black);
   color: var(--off-white);
   font-size: xx-large;
+}
+.item11 p {
+  text-align: center;
 }
 
 #startTime {
   text-align: center;
+}
+
+#homeTeamContainerID {
+  display: flex;
+  justify-content: space-around;
+}
+
+#awayTeamContainerID {
+  display: flex;
 }
