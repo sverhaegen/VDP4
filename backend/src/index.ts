@@ -3,6 +3,8 @@ import express, { Request, Response } from 'express';
 import cors from 'cors';
 import mysql from 'mysql2';
 import postgres from 'postgres';
+import axios, { AxiosPromise, AxiosResponse } from 'axios';
+import { GetUpcomingMatchAPIResponse } from './rbfa/types.js';
 
 // Create an Express application
 const app = express();
@@ -46,10 +48,15 @@ app.use(cors(corsOptions));
 // Specify the port number for the server
 const port = process.env.PORT || 3000;
 
-// Define a route for the root path ('/')
-app.get('/', (req: Request, res: Response) => {
+// Upcoming Match
+app.get('/upcomingMatch', async (req: Request, res: Response) => {
+  const upcomingMatchAxiosResponse: AxiosResponse = await axios.get(
+    'https://datalake-prod2018.rbfa.be/graphql?operationName=GetUpcomingMatch&variables={"teamId":"307846","language":"nl"}&extensions={"persistedQuery":{"version":1,"sha256Hash":"82e90ddafc6823e8cc5c5d876073e0e01c261f6844ad8e8bab5b8fd0b17da5e1"}}'
+  );
+  const upcomingMatch: GetUpcomingMatchAPIResponse =
+    upcomingMatchAxiosResponse.data;
   // Send a response to the client
-  res.send({ test: 'Test' });
+  res.send(upcomingMatch);
 });
 
 // Start the server and listen on the specified port
